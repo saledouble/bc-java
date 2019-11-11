@@ -68,7 +68,7 @@ public class JceKeyTransAuthEnvelopedRecipient
         public void write(byte[] buf, int off, int len)
             throws IOException
         {
-            cipher.updateAAD(buf, off, len);
+            cipher.update(buf, off, len);
         }
 
         public void write(int b)
@@ -76,7 +76,7 @@ public class JceKeyTransAuthEnvelopedRecipient
         {
             oneByte[0] = (byte)b;
 
-            cipher.updateAAD(oneByte);
+            cipher.update(oneByte);
         }
     }
 }

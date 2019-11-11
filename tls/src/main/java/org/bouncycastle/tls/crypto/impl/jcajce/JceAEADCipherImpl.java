@@ -102,7 +102,7 @@ public class JceAEADCipherImpl
 
                 if (additionalData != null && additionalData.length > 0)
                 {
-                    cipher.updateAAD(additionalData);
+                    cipher.update(additionalData);
                 }
             }
             else

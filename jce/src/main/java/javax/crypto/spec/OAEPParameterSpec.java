@@ -2,6 +2,8 @@ package javax.crypto.spec;
 
 import java.security.spec.AlgorithmParameterSpec;
 
+import org.bouncycastle.crypto.encodings.OAEPEncoding;
+
 /**
  * This class specifies the set of parameters used with OAEP Padding, as defined
  * in the PKCS #1 standard. Its ASN.1 definition in PKCS#1 standard is described
@@ -34,7 +36,9 @@ import java.security.spec.AlgorithmParameterSpec;
 public class OAEPParameterSpec
     implements AlgorithmParameterSpec
 {
-    private String mdName;
+    public static final OAEPParameterSpec DEFAULT = null;
+    
+	private String mdName;
     private String mgfName;
     private AlgorithmParameterSpec mgfSpec;
     private PSource pSrc;
